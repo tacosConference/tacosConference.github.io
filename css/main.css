@@ -1,0 +1,144 @@
+:root {
+    --fg: #000000;
+    --bg: white;
+    --border-color: var(--fg);
+    --standard-spacing: 0.4em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+    min-width: 100vw;
+
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+
+    grid-template-areas: ". main .";
+}
+
+body,
+input,
+select,
+button {
+    font-family: "Fira Sans Light", sans-serif;
+    color: var(--fg);
+    font-size: 13pt;
+}
+
+input, select, button {
+    background-color: var(--bg);
+}
+
+a {
+    font-family: "Fira Sans";
+    color: var(--fg);
+}
+
+strong {
+    font-family: "Fira Sans";
+    font-weight: normal;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: "Fira Sans";
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"] {
+    padding: var(--standard-spacing);
+    border-radius: var(--standard-border-radius);
+}
+
+main {
+    grid-area: main;
+    margin: 2em 0;
+    padding: 2em;
+    height: max-content;
+}
+
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+
+li {
+    padding: 0.2em 0;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: "Charm";
+    margin: 0;
+}
+
+.hero {
+    font-size: 250%;
+    text-align: center;
+    color: gray;
+}
+
+.signature {
+    font-size: 150%;
+    font-family: "Charm";
+    color: #008;
+
+    margin-top: 0;
+}
+
+.subsignature {
+    border-top: 1px solid gray;
+    color: gray;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+button {
+    --shadow-offset: 3px;
+
+    background-color: #fff5e2;
+
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 1em;
+
+    transition: box-shadow 0.15s;
+}
+
+button:hover {
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 6px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    transition: none;
+
+    box-shadow: none;
+    margin-top: var(--shadow-offset);
+    margin-left: var(--shadow-offset);
+}
+
+@media (max-width: 1600px) {
+    body {
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr 5fr 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        grid-template-columns: 1fr 6fr 1fr;
+    }
+}
