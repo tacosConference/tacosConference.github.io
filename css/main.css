@@ -24,7 +24,7 @@ body,
 input,
 select,
 button {
-    font-family: "Fira Sans Light", sans-serif;
+    font-family: "Nunito", sans-serif;
     color: var(--fg);
     font-size: 13pt;
 }
@@ -34,13 +34,8 @@ input, select, button {
 }
 
 a {
-    font-family: "Fira Sans";
     color: var(--fg);
-}
-
-strong {
-    font-family: "Fira Sans";
-    font-weight: normal;
+    font-weight: bold;
 }
 
 input {
@@ -75,6 +70,10 @@ main {
 
 li {
     padding: 0.2em 0;
+}
+
+h1 {
+    font-family: "Inconsolata", monospace;
 }
 
 h2, h3, h4, h5, h6 {
