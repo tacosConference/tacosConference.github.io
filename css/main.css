@@ -16,6 +16,8 @@ body {
     grid-template-columns: 2fr 3fr 2fr;
 
     grid-template-areas: ". main .";
+
+    background: radial-gradient(circle farthest-corner at 90% 10%, #F59E0B 0%, #EF4444 50%, #EC4899 100%);
 }
 
 body,
